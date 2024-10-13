@@ -1,0 +1,35 @@
+.input{
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    background: var(--gray-400);
+    border: 0;
+    line-height: 1.4;
+    resize: none;
+    width: 100%;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--gray-100);
+
+}
+
+.addButton{
+    width: 6rem;
+    border-radius: 5px;
+    border: 0;
+    color: var(--gray-100);
+    background: var(--blue-600);
+}
+
+.addButton:hover{
+    background: var(--blue-500);
+    cursor: pointer;
+}
+
+.content{
+    height: 3rem;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}

@@ -13,6 +13,10 @@
     --danger:#E25858;
 }
 
+:focus{
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--blue-600);
+}
 
 *{
     margin: 0;
