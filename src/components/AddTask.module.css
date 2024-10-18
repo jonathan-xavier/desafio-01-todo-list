@@ -33,3 +33,25 @@
     flex-direction: row;
     gap: .5rem;
 }
+
+.contentList{
+    /* background: rgb(60, 87, 87); */
+    margin-top: 6rem;
+}
+
+.headerContentList{
+    display: flex;
+    justify-content: space-between
+}
+
+.headerContentList > span{
+    font-weight: bold;
+}
+
+.taskCreate{
+    color: var(--blue-500);
+}
+
+.taskDone{
+    color: var(--purple-500);
+}

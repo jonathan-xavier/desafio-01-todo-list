@@ -1,7 +1,8 @@
 import {v4 as uuidv4} from 'uuid';
+import { IList } from './model/List';
 
 
-const tasks = [
+const tasks:IList[] = [
     {
         id: uuidv4(),
         title: 'terminar o desafio',
