@@ -5,7 +5,7 @@ import { IList } from './model/List';
 const tasks:IList[] = [
     {
         id: uuidv4(),
-        title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+        title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames.',
         isCompleted: true
     },
 

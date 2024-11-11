@@ -40,3 +40,5 @@ export function AddTask(){
         </div>
     )
 }
+
+// fazer a funcionalidade de adicionar task
