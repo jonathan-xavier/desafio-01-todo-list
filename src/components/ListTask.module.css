@@ -3,35 +3,55 @@
     /* width: 700px; */
     background: var(--gray-500);
     border-radius: 8px;
-    padding: 1rem 2.5rem;
+    padding: 1rem 1.5rem;
     margin-top: 1rem;
     border: 1px solid var(--gray-400);
     font-size: 14px;
     color: var(--gray-100);
     display: flex;
-    position: relative;
+    flex-direction: row;  
+    justify-content: center;
 }
-.container{
-    
-    
-    
+.main button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 2px;
 }
 
+.container_title{   
+}
+
+.trash_button{
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button_and_icon{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.button_and_icon > p{
+    padding-left: 1rem;
+}
+
+svg{
+
+
+}
 .circle{
-    position: absolute;
-    
+    color: var(--blue-600) !important;   
 }
 
 .trash {
     grid-area: trashIcon;
 }
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: aqua;
-       
-}
+
 
 
 .container button{
