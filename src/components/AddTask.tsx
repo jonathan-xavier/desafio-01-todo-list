@@ -1,7 +1,7 @@
 import styles from './AddTask.module.css'
 import { SetStateAction, useState} from 'react'
 import tasks from '../mock'
-import { ListTask } from './ListTask'
+import { ListTaskItem } from './ListTask'
 
 
 
@@ -33,7 +33,7 @@ export function AddTask(){
                 </div>
                 <div className={styles.list}>
                     {tasks.map(task => 
-                        <ListTask key={task.id} {...task} />
+                        <ListTaskItem key={task.id} {...task} />
                     )}
                 </div>
             </div>

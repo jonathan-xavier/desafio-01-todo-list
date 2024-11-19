@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import { IList } from "../interface/List";
+=======
+
+import { IList } from "../model/List";
+>>>>>>> 26fb5f9476842b6100adad2a37fa64db13a00cc9
 import styles from "./ListTask.module.css";
 import { Trash, Circle } from "@phosphor-icons/react";
 
-export function ListTask(list: IList) {
+const ListTaskItem: React.FC<IList> = (list) => {
+   
   return (
     <div className={styles.main}>
       <div className={styles.button_and_icon}>
@@ -31,5 +37,6 @@ export function ListTask(list: IList) {
   );
 }
 
+export {ListTaskItem}
 //ira listar os itens e ira excluir os itens
 //e marcar como feito com um check.
