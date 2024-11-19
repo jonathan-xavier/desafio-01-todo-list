@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-import { IList } from './model/List';
+import { IList } from './interface/List';
 
 
 const tasks:IList[] = [

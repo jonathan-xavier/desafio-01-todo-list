@@ -1,4 +1,4 @@
-import { IList } from "../model/List";
+import { IList } from "../interface/List";
 import styles from "./ListTask.module.css";
 import { Trash, Circle } from "@phosphor-icons/react";
 
