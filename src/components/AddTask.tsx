@@ -2,9 +2,13 @@ import styles from './AddTask.module.css'
 import React, { SetStateAction, useState} from 'react'
 import tasks from '../mock'
 import { ListTaskItem } from './ListTask'
+import { useMount } from '../util/use-mount'
+import { IList } from '../interface/List'
 
 
 const AddTask: React.FC = () => {
+
+    const [myTask, setMyTask] = useState<IList[]>([])
     
     const [inputValue, setInputValue] = useState('')
 
@@ -17,9 +21,16 @@ const AddTask: React.FC = () => {
        console.log(tasks)
     }
 
-    const deleteItem = (item: string) => {
+    const deleteItem = (item: string) => {     
+        // myTask.map( (task) => {
+            // task.id === item.charAt()
+        // })   
         console.log(`Deletar ${item}`)
     }
+
+    useMount(async ()=> {
+        setMyTask(tasks)
+    })
 
     return(
         <div>
@@ -36,7 +47,7 @@ const AddTask: React.FC = () => {
                     <span className={styles.taskDone}>Concluidas <span>2 de 5</span></span>
                 </div>
                 <div className={styles.list}>
-                    {tasks.map(task => 
+                    {myTask.map(task => 
                         <ListTaskItem key={task.id} {...task} onDelete={deleteItem} />
                     )}
                 </div>

@@ -2,15 +2,13 @@ import { IList } from "../interface/List";
 import styles from "./ListTask.module.css";
 import { Trash, Circle } from "@phosphor-icons/react";
 
-const ListTaskItem: React.FC<IList> = (list) => {
+const ListTaskItem: React.FC<IList> = (list, onDelete) => {
   
+
   const deletarTask = (idItem: string) => {
-    
-    list.onDelete(idItem)
+    onDelete(idItem)
   }
     
-
-  
   return (
     <div className={styles.main}>
       <div className={styles.button_and_icon}>
@@ -28,7 +26,7 @@ const ListTaskItem: React.FC<IList> = (list) => {
         
         <button
           className={styles.trash}
-          //  onClick={deletarTask(id)}
+            onClick={() => deletarTask(list.id)}
           >
 
           <Trash size={20} />
