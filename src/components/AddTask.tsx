@@ -1,11 +1,11 @@
 import styles from './AddTask.module.css'
-import { SetStateAction, useState} from 'react'
+import React, { SetStateAction, useState} from 'react'
 import tasks from '../mock'
 import { ListTaskItem } from './ListTask'
 
 
-
-export function AddTask(){
+const AddTask: React.FC = () => {
+    
     const [inputValue, setInputValue] = useState('')
 
     const handleChange = (event: { target: { value: SetStateAction<string> } }) => {
@@ -15,6 +15,10 @@ export function AddTask(){
     const handleClick = () => {
        console.log(inputValue) 
        console.log(tasks)
+    }
+
+    const deleteItem = (item: string) => {
+        console.log(`Deletar ${item}`)
     }
 
     return(
@@ -33,12 +37,14 @@ export function AddTask(){
                 </div>
                 <div className={styles.list}>
                     {tasks.map(task => 
-                        <ListTaskItem key={task.id} {...task} />
+                        <ListTaskItem key={task.id} {...task} onDelete={deleteItem} />
                     )}
                 </div>
             </div>
         </div>
     )
 }
+
+export {AddTask}
 
 // fazer a funcionalidade de adicionar task
