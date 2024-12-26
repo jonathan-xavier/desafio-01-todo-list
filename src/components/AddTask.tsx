@@ -22,7 +22,7 @@ const AddTask: React.FC = () => {
     }
 
     const deleteItem = (item: string) => {     
-        // myTask.map( (task) => {
+        // myTask.map( task => {
             // task.id === item.charAt()
         // })   
         console.log(`Deletar ${item}`)
