@@ -54,9 +54,40 @@
 }
 
 .taskCreate{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     color: var(--blue-500);
 }
 
 .taskDone{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     color: var(--purple-500);
+}
+
+.taskDone_completed{
+    
+    color: var(--gray-200);
+    background-color: var(--gray-400);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+.nothing_to_show{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text{
+    color: var(--gray-300);
+}
+.text > span{
+    font-weight: bold;
 }

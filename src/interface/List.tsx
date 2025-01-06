@@ -5,6 +5,7 @@ export type IList = {
     title: string,
     isCompleted: boolean,
     onDelete?: (item: string) => void,
+    onChecked?: (item: string) => void,
 }
 
 

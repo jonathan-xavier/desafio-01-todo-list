@@ -1,15 +1,26 @@
 
+import { useEffect, useState } from "react";
 import styles from "./ListTask.module.css";
-import { Trash, Circle } from "@phosphor-icons/react";
+import { Trash, Circle, CheckCircle } from "@phosphor-icons/react";
 
 const ListTaskItem: React.FC<{
   id: string,
   title: string,
   isCompleted: boolean,
   onDelete: (item: string) => void,
-}> = ({ id, title, isCompleted, onDelete }) => {
+  onChecked: (item: string) => void,
+}> = ({ id, title, isCompleted, onDelete, onChecked }) => {
 
-  console.log(isCompleted)
+  const [isCompletedTask, setIscompletedTask] = useState(Boolean)
+
+  const handleChecked = () => {
+    onChecked(id)
+  }
+
+  useEffect(() => {
+    setIscompletedTask(isCompleted)
+  },[isCompleted])
+
 
   return (
     <div className={styles.main}>
@@ -17,12 +28,13 @@ const ListTaskItem: React.FC<{
 
         <button
           className={styles.circle}
-          onClick={() => {
-            alert("checked");
-          }}>
-          <Circle size={20} />
+          onClick={handleChecked}>
+          {isCompletedTask === true ? <CheckCircle size={20} color="#5E60CE" weight="fill" /> : <Circle size={20} />}  
         </button>
-        <p className={styles.container_title}>{title}</p>
+    
+        <p>{isCompletedTask === true ? 
+          <del className={styles.container_del}>{title}</del>: title}
+        </p>
       </div>
       <div className={styles.trash_button}>
 
@@ -39,5 +51,4 @@ const ListTaskItem: React.FC<{
 }
 
 export { ListTaskItem }
-//ira listar os itens e ira excluir os itens
-//e marcar como feito com um check.
+

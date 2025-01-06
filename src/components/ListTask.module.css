@@ -21,9 +21,9 @@
     border-radius: 2px;
 }
 
-.container_title{   
+.container_del{
+    color: var(--gray-300);
 }
-
 .trash_button{
     width: 5%;
     display: flex;
